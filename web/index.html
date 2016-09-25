@@ -4,11 +4,100 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>emmagadikke</title>
+	<title>EmmaGadIkke</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+<!--    <link src="css/animate.css" />-->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
 
+    <div id="menu">
+        <div>Emma Gad Ikke</div>
+        <div>Om Emma</div>
+        <div>Køb bogen</div>
+    </div>
+    
+    <div class="space"></div>
+    
+    <div class="page" id="player">
+        <h3>Emma Gad Ikke</h3>
+        <p>På denne side kan du høre musikken til bogen <i>Emma Gad Ikke i bad</i>.</p>
+        <div class="drawing">
+            <img class="" src="graphics/emma.png" align="middle" />
+        </div>
+        
+        <audio id="audio_player">
+          <source src="audio/emma.mp3" type="audio/mpeg">
+          Din browser understøtter ikke denne afspiller. Du kan <a href="audio/emma.mp3"> hente musik-filen og afspille den på din computer, tablet eller telefon.</a>
+        </audio>
+        
+        <div id="playercontrols">
+            <button class="play" id="pbtn" onclick="playAudio()"></button>
+            <button id="reset" onclick="resetAudio()"></button>
+        </div>
+        
+<!--        <div id="test"></div>-->
+<!--
+        <div id="audioplayer" >
+          <button id="pButton" class="play" onclick="playAudio()"></button>
+-->
+<!--
+            <div id="timeline">
+            <div id="playhead"></div>
+          </div>
+-->
+<!--
+            <div id="lowvol"></div>
+              <div id="volume_control">
+-->
+<!--                <label id="rngVolume_label" for="rngVolume">Volume:</label>-->
+<!--
+                  <input type="range" onchange="setVolume(this.value)" id="rngVolume" min="0" max="1" step="0.01" value="1">
+              </div>
+            <div id="hivol"></div>
+        </div>
+-->
+    </div>
+    <div class="space"></div>
+    
+    <div class="page" id="about">
+        <h3>Om Emma Gad Ikke</h3>
+        <p>Dette project Et legam duis nisi singulis. E quem mandaremus iis quibusdam sint expetendis te 
+            officia magna fabulas, excepteur quem ingeniis, sed sunt culpa ad officia quo 
+            non summis eram dolore ullamco, summis probant possumus, quid aut et lorem 
+            vidisse. </p>
+        <p> Te eram consectetur, varias ubi se multos aliquip, ab mentitum 
+            adipisicing.</p>
+        <p>Derudover Fabulas de dolor ad elit eiusmod o occaecat quo sed quibusdam distinguantur, 
+            veniam occaecat te duis dolore id multos cupidatat eu quamquam, fore si an irure 
+            pariatur si se iis velit ipsum quem, incurreret magna dolore ad aliqua. </p>
+        <div class="drawing">
+            <img class="drawing" src="graphics/jeppe.png" />
+        </div>
+    </div>
+    
+    <div class="space"></div>
+    
+    <div class="page" id="buy">
+        <h3>Køb bogen</h3>
+        <p>Du kan bestille et eksamplar af Emma Gad Ikke i bad ved at udfylde formularen herunder. Du vil modtage en ordrebekræftelse pr. mail, der også indeholder et telefonnummer, som du kan betale med via Mobile Pay. <br> Når du har betalt sendes bogen til dig med Post Danmark. </p>
+        <p>Bogen koster 1 m. kroner, og forsendelse koster Post Danmarks standardtakst. </p>
+        <form id="buy_form">
+            <input type="text" autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="false" required name="name" placeholder="Navn" />
+            <input type="text" autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="false" required name="adress" placeholder="Adresse" />
+            <input type="text" autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="false" required name="zip" placeholder="Postnummer" />
+            <input type="text" autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="false" required name="city" placeholder="By" />
+            <input type="email" autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="false" required name="email" placeholder="Email" />
+            <input type="text" autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="true" name="comments" placeholder="Evt. kommentar" />
+            
+            <input class="btn btn-info" type="submit" value="Bestil "/>
+        </form>
+    </div>
+    <div id="footer"> Meta-info i footeren. Forlagets navn? En mailadresse?</div>
 </body>
 
 </html>
