@@ -15,17 +15,24 @@
 
 <body>
 
+    
+    <div class="space" id="spaceOne"></div>
+    
+    <div class="page maxHeight" id="player">
+        
     <div id="menu">
-        <div>Emma Gad Ikke</div>
-        <div>Om Emma</div>
-        <div>Køb bogen</div>
+        <div class="hover_scale" id="menu_player" data-target="#spaceOne">Emma Gad Ikke</div>
+        <div class="hover_scale" id="menu_about" data-target="#spaceTwo">Om Emma</div>
+        <div class="hover_scale" id="menu_buy" data-target="#spaceThree">Køb bogen</div>
+        
     </div>
-    
-    <div class="space"></div>
-    
-    <div class="page" id="player">
         <h3>Emma Gad Ikke</h3>
-        <p>På denne side kan du høre musikken til bogen <i>Emma Gad Ikke i bad</i>.</p>
+        <p><i>Emma Gad Ikke</i> er en børnebog Nam te nulla occaecat, hic illum magna velit mentitum. De magna multos illum 
+            deserunt, ingeniis quorum offendit. In duis si nisi. Incurreret fugiat excepteur 
+            expetendis, aliqua appellat an veniam elit, minim aliquip sed aliqua quorum de 
+            se sint tractavissent, quibusdam illum arbitror consequat, non nulla velit non 
+            aliquip, ne se instituendarum, do de quem quis sunt. </p>
+        <p>På afspilleren herunder kan du høre musikken til bogen <i>Emma Gad Ikke i bad</i>.</p>
         <div class="drawing">
             <img class="" src="graphics/emma.png" align="middle" />
         </div>
@@ -35,9 +42,9 @@
           Din browser understøtter ikke denne afspiller. Du kan <a href="audio/emma.mp3"> hente musik-filen og afspille den på din computer, tablet eller telefon.</a>
         </audio>
         
-        <div id="playercontrols">
-            <button class="play" id="pbtn" onclick="playAudio()"></button>
-            <button id="reset" onclick="resetAudio()"></button>
+        <div id="playercontrols"> 
+            <button class="hover_scale play" id="pbtn" onclick="playAudio()"></button>
+            <button class="hover_scale" id="reset" onclick="resetAudio()"></button>
         </div>
         
 <!--        <div id="test"></div>-->
@@ -62,7 +69,7 @@
         </div>
 -->
     </div>
-    <div class="space"></div>
+    <div class="space" id="spaceTwo"></div>
     
     <div class="page" id="about">
         <h3>Om Emma Gad Ikke</h3>
@@ -80,12 +87,14 @@
         </div>
     </div>
     
-    <div class="space"></div>
+    <div class="space" id="spaceThree"></div>
     
     <div class="page" id="buy">
         <h3>Køb bogen</h3>
+<!--        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalConditions">Open Modal</button>-->
         <p>Du kan bestille et eksamplar af Emma Gad Ikke i bad ved at udfylde formularen herunder. Du vil modtage en ordrebekræftelse pr. mail, der også indeholder et telefonnummer, som du kan betale med via Mobile Pay. <br> Når du har betalt sendes bogen til dig med Post Danmark. </p>
-        <p>Bogen koster 1 m. kroner, og forsendelse koster Post Danmarks standardtakst. </p>
+        <p>Bogen koster 1 m. kroner, ekslusiv forsendelse (Post Danmarks standardtakst). </p>
+        <p>Ved at klikke "bestil" accepterer du <a href="" data-toggle="modal" data-target="#modalConditions">handelsbetingelserne</a>.</p>
         <form id="buy_form">
             <input type="text" autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="false" required name="name" placeholder="Navn" />
             <input type="text" autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="false" required name="adress" placeholder="Adresse" />
@@ -94,10 +103,41 @@
             <input type="email" autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="false" required name="email" placeholder="Email" />
             <input type="text" autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="true" name="comments" placeholder="Evt. kommentar" />
             
-            <input class="btn btn-info" type="submit" value="Bestil "/>
+            <input class="btn btn-default" type="submit" value="Bestil "/>
         </form>
     </div>
     <div id="footer"> Meta-info i footeren. Forlagets navn? En mailadresse?</div>
+    
+    <!-- Modal betingelser -->
+<div id="modalConditions" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Handelsbetingelser</h4>
+      </div>
+      <div class="modal-body">
+          <p>In esse sempiternum, labore distinguantur voluptate ipsum possumus est fore 
+              occaecat ubi nisi nisi iis in minim praetermissum ad senserit velit offendit 
+              expetendis si tempor amet cernantur occaecat e commodo summis admodum id minim 
+              qui occaecat ut sunt. Offendit multos nam vidisse adipisicing, quamquam labore 
+              cillum vidisse aute iis expetendis eruditionem ut nostrud de lorem est senserit 
+              ut aliqua, quem quibusdam hic quid illum eu admodum o appellat, nam ea 
+              illustriora ab ex nam exercitation. Qui arbitror despicationes de iis ex 
+              firmissimum. A nulla irure est doctrina, minim mentitum deserunt aut iudicem 
+              anim singulis, offendit qui senserit. Quid te probant, fore ubi aliquip ita sint 
+              a hic labore expetendis laboris de ab nam eram culpa veniam. Ita elit commodo 
+              reprehenderit.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Ok, jeg er med!</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 </body>
 
 </html>
