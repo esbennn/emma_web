@@ -4,7 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>EmmaGadIkke</title>
+	<title>Emma Gad Ikke</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 <!--    <link src="css/animate.css" />-->
@@ -27,11 +28,10 @@
         
     </div>
         <h3>Emma Gad Ikke</h3>
-        <p><i>Emma Gad Ikke</i> er en børnebog Nam te nulla occaecat, hic illum magna velit mentitum. De magna multos illum 
-            deserunt, ingeniis quorum offendit. In duis si nisi. Incurreret fugiat excepteur 
-            expetendis, aliqua appellat an veniam elit, minim aliquip sed aliqua quorum de 
-            se sint tractavissent, quibusdam illum arbitror consequat, non nulla velit non 
-            aliquip, ne se instituendarum, do de quem quis sunt. </p>
+        <p>Velkommen til Emmas helt egen hjemmeside.
+Her kan I høre sangene til teksten bagerst i bøgerne. Og hvem ved – måske I begynder at synge med helt af jer selv?</p>
+		<p>
+Følg med på siden, hvor I kan bestille alle bøgerne. Der kommer løbende nye bøger om alle de ting, som Emma bare ikke gider. </p>
         <p>På afspilleren herunder kan du høre musikken til bogen <i>Emma Gad Ikke i bad</i>.</p>
         <div class="drawing">
             <img class="" src="graphics/emma.png" align="middle" />
@@ -96,14 +96,15 @@
         <p>Bogen koster 1 m. kroner, ekslusiv forsendelse (Post Danmarks standardtakst). </p>
         <p>Ved at klikke "bestil" accepterer du <a href="" data-toggle="modal" data-target="#modalConditions">handelsbetingelserne</a>.</p>
         <form id="buy_form">
+            <input type="text" autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="false" name="robots" placeholder="" style="display:none" />
             <input type="text" autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="false" required name="name" placeholder="Navn" />
-            <input type="text" autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="false" required name="adress" placeholder="Adresse" />
+            <input type="text" autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="false" required name="address" placeholder="Adresse" />
             <input type="text" autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="false" required name="zip" placeholder="Postnummer" />
             <input type="text" autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="false" required name="city" placeholder="By" />
             <input type="email" autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="false" required name="email" placeholder="Email" />
             <input type="text" autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="true" name="comments" placeholder="Evt. kommentar" />
             
-            <input class="btn btn-default" type="submit" value="Bestil "/>
+            <input class="btn btn-default" type="submit" id="orderbtn" value="Bestil "/>
         </form>
     </div>
     <div id="footer"> Meta-info i footeren. Forlagets navn? En mailadresse?</div>
@@ -133,6 +134,52 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Ok, jeg er med!</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+	
+	    <!-- Modal success -->
+<div id="modalSuccess" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Bestilling gennemført</h4>
+      </div>
+      <div class="modal-body">
+          <p>Tak for din bestilling!</p>
+          <p>Du vil inden længe modtage en mail med ordrebekræftelse samt information om betaling. </p>
+          <p>Hvad skal der i virkeligheden stå her Lisa?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Ok, jeg glæder mig!</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+	
+	    <!-- Modal error -->
+<div id="modalError" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Øv - der skete en fejl!</h4>
+      </div>
+      <div class="modal-body">
+          <p>Der er deværre sket en fejl.</p>
+          <p>Du kan prøve igen om lidt, det er sikkert en midlertidig server-fejl. Dine indtastede detaljer står stadig i formularen.</p>
+          <p>Hvis det ikke lykkes kan du sende en mail til enellerandenadresse@helehistorien.dk med din bestilling. Så bliver vi i samme omgang opmærksomme på problemet, og kan prøve at fixe det.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Ok...</button>
       </div>
     </div>
 

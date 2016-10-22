@@ -1,6 +1,7 @@
 body {
     background-color: #ffffff;
-    font-family: Georgia, serif;
+/*    font-family: Georgia, serif;*/
+    font-family: 'Roboto Slab', serif;
     color: #5c5c5c;
 }
 
@@ -8,7 +9,7 @@ body {
     display: inline-block;
     margin: 1vh 1vh;
     padding: 1vh;
-/*    background-color: aliceblue;*/
+/*    background-color: aliceblue;*/ 
     cursor: pointer;
     font-size: 120%;
 
@@ -77,15 +78,18 @@ body {
 
 .drawing {
     width: 70vw;
-    max-width: 700px;
+    max-width: 600px;
     min-width: 200px;
     margin: auto;
 }
 
 .drawing>img {
-    width: 70vw;
+/*    width: 70vw;*/
+    width: 100%;
+/*
     max-width: 700px;
     min-width: 200px;
+*/
     margin: auto;
 }
 
@@ -138,7 +142,7 @@ body {
 
 #playercontrols{
     width: 200px;
-    margin: 5vh auto;
+    margin: -6vh auto;
 }
 
 

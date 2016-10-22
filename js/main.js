@@ -38,12 +38,13 @@ function scrollTo(element){
     },600, 'swing');
 }
 
+
 $( document ).ready(function(){
    // Player vars
     music = document.getElementById('audio_player');
     playbtn = document.getElementById('pbtn');
     
-    //Eventlisteners for menu buttons
+    //Eventlisteners for menu buttons 
     $('#menu_player').on('click', function(){
         
     });
@@ -55,4 +56,39 @@ $( document ).ready(function(){
             scrollTo(target);
         });
     });
+	
+	$('#buy_form').submit(function(e){
+        e.preventDefault();
+		console.log('her');
+		var datastring = $(this).serializeArray();
+		$.ajax({
+            url: "api/index.php",
+            data: datastring,
+            type: "POST",
+            dataType: "json",
+            timeout: 3000,
+            complete: function(obj, status){
+                console.log("done " + status);
+                console.log(obj);
+            },
+            success: function(data, status, jqxhr){
+				console.log(data);
+                if (data.status == "OK" && status == "success"){
+//                if (data.status == "OK" && status == "success"){
+//                    alert("Mail sendt!!");
+					$('#modalSuccess').modal('show');
+					$('#buy_form')[0].reset();
+                } else {
+					$('#modalError').modal('show');
+//                    alert("Der skete en fejl")
+                } 
+            },
+            error: function(jqxhr, status, error){
+				$('#modalError').modal('show');
+//                alert("Der skete en fejl:" + error);
+                console.log(jqxhr);
+//                console.log(jqxhr);
+            },
+        });
+	});
 });
