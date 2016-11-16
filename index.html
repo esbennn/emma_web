@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Emma Gad Ikke</title>
+	<title>EMMA GAD IKKE</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -16,24 +16,45 @@
 
 <body>
 
+      <nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="#landing">EMMA GAD IKKE</a>
+		</div>
+		<div class="collapse navbar-collapse" id="menu">
+		  <ul class="nav navbar-nav">
+			<li class=""><a href="#player">Hør musikken</a></li>
+			<li><a href="#about">Om Emma</a></li>
+			<li><a href="#buy">Køb</a></li>
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+	
+<!--    <div class="space" id="spaceOne"></div>-->
     
-    <div class="space" id="spaceOne"></div>
-    
-    <div class="page maxHeight" id="player">
+    <div class="page maxHeight target" id="landing">
         
+<!--
     <div id="menu">
-        <div class="hover_scale" id="menu_player" data-target="#spaceOne">Emma Gad Ikke</div>
+        <div class="hover_scale" id="menu_player" data-target="#spaceOne">EMMA GAD IKKE</div>
         <div class="hover_scale" id="menu_about" data-target="#spaceTwo">Om Emma</div>
         <div class="hover_scale" id="menu_buy" data-target="#spaceThree">Køb bogen</div>
         
     </div>
-        <h3>Emma Gad Ikke</h3>
+-->
+        <h3>EMMA GAD IKKE</h3>
         <p>Velkommen til Emmas helt egen hjemmeside.
 Her kan I høre sangene til teksten bagerst i bøgerne. Og hvem ved – måske I begynder at synge med helt af jer selv?</p>
 		<p>
 Følg med på siden, hvor I kan bestille alle bøgerne. Der kommer løbende nye bøger om alle de ting, som Emma bare ikke gider. </p>
         <p>På afspilleren herunder kan du høre musikken til bogen <i>Emma Gad Ikke i bad</i>.</p>
-        <div class="drawing">
+        <div class="drawing portrait target" id="player">
             <img class="" src="graphics/emma.png" align="middle" />
         </div>
         
@@ -69,10 +90,10 @@ Følg med på siden, hvor I kan bestille alle bøgerne. Der kommer løbende nye 
         </div>
 -->
     </div>
-    <div class="space" id="spaceTwo"></div>
+<!--    <div class="space" id="spaceTwo"></div>-->
     
-    <div class="page" id="about">
-        <h3>Om Emma Gad Ikke</h3>
+    <div class="page target" id="about">
+        <h3>Om EMMA GAD IKKE</h3>
         <p>Dette project Et legam duis nisi singulis. E quem mandaremus iis quibusdam sint expetendis te 
             officia magna fabulas, excepteur quem ingeniis, sed sunt culpa ad officia quo 
             non summis eram dolore ullamco, summis probant possumus, quid aut et lorem 
@@ -87,9 +108,9 @@ Følg med på siden, hvor I kan bestille alle bøgerne. Der kommer løbende nye 
         </div>
     </div>
     
-    <div class="space" id="spaceThree"></div>
+<!--    <div class="space" id="spaceThree"></div>-->
     
-    <div class="page" id="buy">
+    <div class="page target" id="buy">
         <h3>Køb bogen</h3>
 <!--        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalConditions">Open Modal</button>-->
         <p>Du kan bestille et eksamplar af Emma Gad Ikke i bad ved at udfylde formularen herunder. Du vil modtage en ordrebekræftelse pr. mail, der også indeholder et telefonnummer, som du kan betale med via Mobile Pay. <br> Når du har betalt sendes bogen til dig med Post Danmark. </p>
@@ -104,7 +125,7 @@ Følg med på siden, hvor I kan bestille alle bøgerne. Der kommer løbende nye 
             <input type="email" autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="false" required name="email" placeholder="Email" />
             <input type="text" autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="true" name="comments" placeholder="Evt. kommentar" />
             
-            <input class="btn btn-default" type="submit" id="orderbtn" value="Bestil "/>
+            <input class="btn btn-success" type="submit" id="orderbtn" value="Bestil "/>
         </form>
     </div>
     <div id="footer"> Meta-info i footeren. Forlagets navn? En mailadresse?</div>

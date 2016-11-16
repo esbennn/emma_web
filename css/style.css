@@ -3,6 +3,7 @@ body {
 /*    font-family: Georgia, serif;*/
     font-family: 'Roboto Slab', serif;
     color: #5c5c5c;
+	padding-top: 70px;
 }
 
 #menu>div{
@@ -35,7 +36,8 @@ body {
         transition-timing-function: cubic-bezier(0.225, 1.470, 0.000, 1.650); /* custom */
 }
 
-.hover_scale:hover, .hover_scale:active{
+/*.hover_scale:hover, .hover_scale:active{*/
+.hover_scale:hover{ 
 /*    background-color: black;*/
 /*    box-shadow: 10px 10px black;*/
 /*    filter: drop-shadow(0px 0px 3px black);*/
@@ -48,6 +50,7 @@ body {
 }
 
 #menu {
+/*
     position: fixed;
     height: 6vh;
     top: 0;
@@ -56,13 +59,14 @@ body {
     max-width: 800px;
     background-color: #ffffff;
     border-bottom: 1px solid #e5e5e5;
+*/
 
 /*    left: calc(100% - 80vw);*/
 }
 
 .page {
     width: 90vw;
-    margin: 0vh auto 16vh auto ;
+    margin: 0vh auto 35vh auto ;
     max-width: 800px;
 }
 
@@ -81,15 +85,16 @@ body {
     max-width: 600px;
     min-width: 200px;
     margin: auto;
+	z-index: -1;
+}
+
+.portrait {
+		width: 35%;
 }
 
 .drawing>img {
 /*    width: 70vw;*/
     width: 100%;
-/*
-    max-width: 700px;
-    min-width: 200px;
-*/
     margin: auto;
 }
 
@@ -122,7 +127,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     float:left;
-    outline:none;
+/*    outline:none;*/
 }
 
 .play{background: url('../graphics/play_large.png') ;}
@@ -137,12 +142,13 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     float:left;
-    outline:none;
+/*    outline:none;*/
+	z-index: 100;
 }
 
 #playercontrols{
     width: 200px;
-    margin: -6vh auto;
+    margin: -1vh auto;
 }
 
 
@@ -154,5 +160,17 @@ body {
 }
 
 
+.navbar {
+	width: 100vw;
+    margin: 0vh auto 16vh auto ;
+	padding: 0px;
+    max-width: 830px;
+}
 
+.navbar-default{
+	background-color: inherit;
+}
 
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+	background-color: #f2f2f2;
+}
